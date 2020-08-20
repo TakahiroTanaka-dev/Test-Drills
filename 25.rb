@@ -13,6 +13,8 @@ def caught_speeding(speed, is_birthday)
   puts "#{point}点の減点です"
 end
 
+caught_speeding(60, false)
+
 # def caught_speeding(speed, is_birthday)
 #   if speed <= 60 && is_birthday == true
 #     puts "0点の減点"
