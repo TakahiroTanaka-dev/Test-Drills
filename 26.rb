@@ -11,7 +11,7 @@ end
 end_other('Hiabc', 'abc')
 end_other('AbC', 'HiaBc')
 end_other('abc', 'abXabc')
-
+end_other('bctan', 'TakahiroTan')
 
 # 書き模範解答でやってることわかるけど、俺のやつでもよくね？
 #def end_other(a, b)
