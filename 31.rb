@@ -14,6 +14,8 @@ near_ten(12)
 near_ten(17)
 near_ten(23)
 
+
+
 # 模範回答
 # def near_ten(num)
 #   remainder = num % 10
