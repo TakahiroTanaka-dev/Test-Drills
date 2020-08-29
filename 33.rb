@@ -1,18 +1,30 @@
 # モッカイ考えよう
 
 def get_days(year, month)
-  year_months = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-  year_months.each do |year_month|
-    i +=1
-    puts year_month[i]
+  month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  if month ==2
+    if year % 4 == 0
+      if (year % 100 == 0) && (year % 400 != 0)
+        days = 28
+      else
+        days = 29
+      end
+    else
+      days = 28
+    end
+  else
+    days = month_days[month - 1]
   end
 
+  return days
 end
 
-puts "年を入力してください："
-year = gets.to_i
-puts "月を入力してください："
-month = gets.to_i
+while true do
+  puts "年を入力してください："
+  year = gets.to_i
+  puts "月を入力してください："
+  month = gets.to_i
 
-days = get_days(year, month)
-puts "#{year}年#{month}月は#{days}日間あります"
+  days = get_days(year, month)
+  puts "#{year}年#{month}月は#{days}日間あります"
+end
