@@ -6,9 +6,6 @@ def registration_student
   puts '生徒の年齢を入力してください'
   student[:year] = gets.to_i
 
-  registration_students = []
-
-  registration_student << student
   # 登録した生徒の国語、数学、英語の点数を登録できるようにしなさい
   puts "国語の得点は？"
   student[:japanese] = gets.to_i
@@ -22,9 +19,12 @@ def registration_student
   students << student
 end
 
-def show_student_name
+def show_student_name(students)
   # 登録された生徒の名前を番号を振って表示しなさい
   puts '見たい生徒の番号を入力してください'
+  students.each_with_index do |student, i|
+    puts "#{i}番目の#{student}情報です"
+  end
 
   # 選択された生徒の名前、年齢、国語、数学、英語の点数を表示できるようにしなさい
   puts "名前:"
